@@ -1,0 +1,207 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-float infinite 3s ease-in-out;
+  }
+}
+
+.App-header {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  float: left;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
+
+.SplitLogo {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Sidebar {
+  background-color: #79a2f4;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 17%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.AppBar {
+  outline-color: pink;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 17%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.MenuBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.ProfileName {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: #79a2f4;
+}
+
+.TransactionsText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: #e071ae;
+  margin-bottom: -10px;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.SearchTransactions {
+  size: 100px;
+  color: #e071ae;
+  padding: 15px;
+  margin-bottom: -3px;
+  margin-right: 50px;
+  padding-top: 50px;
+}
+
+.TransactionsTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Transactions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 60%;
+  left: 17%;
+  margin-top: 100px;
+  margin-left: 100px;
+  /* margin-right: 50px; */
+  align-self: center;
+  justify-self: center;
+  align-content: center;
+  border-style: solid;
+  border-color: #79a2f4;
+  border-width: 0.5px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.PaymentIcon {
+  color: #3e8ef6;
+}
+
+.HomeScreen {
+  justify-content: center;
+  align-items: center;
+  left: 100px;
+}
+
+.NavOptions {
+  background-color: white;
+  color: white;
+}
+
+.NavText {
+  text-decoration: none;
+}
+
+.NavButton {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: white;
+  color: white;
+}
+
+.UnselectedNavText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  color: white;
+  padding: 10px;
+  align-items: center;
+}
+
+.NavIcon {
+  color: white;
+}
+
+.TransactionSummary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-self: flex-start;
+}
+
+
+/* Sign In */
+
+.SignInContainer {
+  background-color: #6fa2fb;
+  height: 75vh;
+  width: 50vh;
+  text-align: center;
+}
+.SignInContainer .InnerContainer {
+  height: 65%;
+  width: 90%;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.SignInContainer .InnerContainer .TextField {
+  margin-top: 2em;
+}
+
+.SignInContainer .InnerContainer button {
+  margin-top: 2.5em;
+}
+
+.SignIn {
+  font-size: 10%;
+  color: white;
+  margin-left: 5%;
+}
+
+.AddButton {
+  border-radius: 50% !important;
+  min-width: 0px !important;
+  margin: 10px auto !important;
+}
+
+#name {
+  padding-left: 15px;
+  height: 56.5px;
+}
+
+.splitButton {
+  bottom: 40px;
+  right: 40px;
+  position: fixed !important;
+}
