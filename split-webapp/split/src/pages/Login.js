@@ -9,11 +9,8 @@ import "../App.css";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import VpnKey from "@material-ui/icons/VpnKey";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import mainLogo from "./split2.png";
-import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/styles";
-
-const apiBaseUrl = process.env.REACT_APP_BACKEND_API;
+import mainLogo from "./split2.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,28 +33,25 @@ class Login extends Component {
       password: undefined
     };
   }
+
   handleOnChangeUser = event => {
     console.log("Click");
     this.state.username = event.target.value;
-    console.log(this.state.username);
   };
+
   handleOnChangePassword = event => {
     console.log("Click");
     this.state.password = event.target.value;
-    console.log(this.state.password);
   };
 
   createDetails() {
-    const user = {
-      username: this.state.username,
-      password: this.state.password
-    };
-    console.log("created user");
+    const user = this.state;
+    console.log(user);
     this.Authenticate(user);
   }
 
   Authenticate(data) {
-    fetch("/api/account/login:", {
+    fetch("/api/account/login", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -65,16 +59,14 @@ class Login extends Component {
       }
     })
       .then(res => {
-        // If "this" is not called in the createBill method, you may have to create the function outside of the class (es-lint rule)
+        console.log(res);
         this.setState({});
         return res;
-        console.log(res);
       })
       .catch(err => console.log(err));
   }
 
   render() {
-    const classes = this.props;
     return (
       <React.Fragment key="LoginKey">
         <CssBaseline />
@@ -103,11 +95,7 @@ class Login extends Component {
                     <Typography component="h3" className="SignIn">
                       Sign In
                     </Typography>
-                    <form
-                      className={classes.root}
-                      noValidate
-                      autoComplete="off"
-                    >
+                    <form noValidate autoComplete="off">
                       <TextField
                         id="outlined-basic"
                         label="Username"
@@ -139,26 +127,22 @@ class Login extends Component {
                     </form>
 
                     <Typography component="h3" className="LogIn">
-                      <NavLink to="/home/transactions">
-                        <Button
-                          variant="contained"
-                          color="primary"
-                          borderRadius={30}
-                          className={classes.margin}
-                          onClick={() => {
-                            this.createDetails();
-                          }}
-                        >
-                          Log In
-                        </Button>
-                      </NavLink>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        borderRadius={30}
+                        onClick={() => {
+                          this.createDetails();
+                        }}
+                      >
+                        Log In
+                      </Button>
 
                       <NavLink to="/SignUp">
                         <Button
                           variant="contained"
                           color="primary"
                           borderRadius={30}
-                          className={classes.margin}
                         >
                           Sign up
                         </Button>
@@ -174,9 +158,5 @@ class Login extends Component {
     );
   }
 }
-
-Login.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 
 export default withStyles(useStyles)(Login);
