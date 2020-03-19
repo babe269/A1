@@ -188,6 +188,10 @@
   margin-left: 5%;
 }
 
+.userTextField {
+  margin-top: 50px;
+}
+
 .AddButton {
   border-radius: 50% !important;
   min-width: 0px !important;
@@ -203,4 +207,14 @@
   bottom: 40px;
   right: 40px;
   position: fixed !important;
+}
+
+.MuiTextField-root {
+  margin: 5px !important;
+  width: 200;
+  background: white;
+}
+
+.margin {
+  margin: 5px !important;
 }
